@@ -12,10 +12,17 @@ $bigMobileWidth: 960px;
 $mobileWidth: 680px;
 $mobileHeight: 600px;
 $blockImgStatic: 510px;
+$formAdaptiv: 577px;
 $snakeSolor: 491px;
 $littleMob: 397px; 
 
 $heightBan: 500px;
+
+@mixin formAdaptiv {
+  @media (max-width: $formAdaptiv) {
+    @content;
+  }
+}
 
 @mixin snakeSolor {
   @media (max-width: $snakeSolor) {

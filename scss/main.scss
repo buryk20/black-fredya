@@ -3,6 +3,10 @@
 @import "_styleAdaptive.scss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+.black-freday-wrp-bun {
+    display: flex;
+    align-items: flex-end;
+}
 
 article.fluid-banner-br-bf {
     position: relative;
@@ -10,6 +14,11 @@ article.fluid-banner-br-bf {
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
+    @include smallestScreenWidth {
+        & {
+            margin-bottom: 20px;
+        }
+    }
   }
   
   .col-lg-12-br-bf {
@@ -28,12 +37,24 @@ article.fluid-banner-br-bf {
     align-items: center;
     width: 100%;
     overflow: hidden;
+    @include mobileWidth {
+        & {
+            max-height: 657px;
+            object-fit: cover;
+            display: flex;
+        }
+    }
   }
   
   .img-wrapper-des-br-bf {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    @include mobileWidth {
+        & {
+            display: none;
+        }
+    }
   }
   
   section.banner-info-wrap-br-bf {
@@ -68,6 +89,13 @@ article.fluid-banner-br-bf {
   
   .img-wrapper-mob-br-bf {
     display: none;
+    @include mobileWidth {
+        & {
+            height: 657px;
+            object-fit: cover;
+            display: flex;
+        }
+    }
   }
   
   @media (max-width: 1500px) {
@@ -133,8 +161,19 @@ article.fluid-banner-br-bf {
   }
 
   .black-freday-wrp {
+    margin-bottom: 50px;
     @include pageGred;
     @include main-text;
+    @include bigMobileWidth {
+        & {
+            @include padMob;
+        }
+    }
+    @include mobileWidth {
+        & {
+            position: absolute;
+        }
+    }
     &__countdown {
         max-width: 708px;
         width: 100%;
@@ -143,9 +182,20 @@ article.fluid-banner-br-bf {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include bigMobileWidth {
+            & {
+                max-width: 350px;
+                width: 100%;
+            }
+        }
     }
     &__text {
         margin-bottom: 58px;
+        @include bigMobileWidth {
+            & {
+                margin-bottom: 30px;
+            }
+        }
     }
     &__countdown-time {
         font-size: 100px;
@@ -153,6 +203,12 @@ article.fluid-banner-br-bf {
         line-height: 90px;
         color: #DDDDDD;
         position: relative;
+        @include bigMobileWidth {
+            & {
+                font-size: 40px;
+                line-height: 38px;
+            }
+        }
         &::before {
             content: "";
             position: absolute;
@@ -165,16 +221,27 @@ article.fluid-banner-br-bf {
     }
     &__countdown-text {
         color: #DDDDDD;
+        @include bigMobileWidth {
+            & {
+                font-size: 12px;
+            }
+        }
     }
     &__countdown-number {
         max-width: 154px;
         width: 100%;
-        padding: 39px 0;
+        padding: 15px 0;
         display: flex;
         flex-direction: column;
         background: linear-gradient(162.37deg, #8A8A8A -34.26%, #000000 99.14%);
         border-radius: 8px;
         border: 2px solid $colorCard;
+        @include bigMobileWidth {
+            & {
+                max-width: 68px;
+                width: 100%;
+            }
+        }
     }
     &__colon {
         font-size: 70px;
@@ -184,17 +251,227 @@ article.fluid-banner-br-bf {
         margin-bottom: 24px;
         font-size: 36px;
         font-weight: 400;
+        @include bigMobileWidth {
+            & {
+                margin-bottom: 16px;
+                font-size: 18px;
+            }
+        }
+        @include mobileWidth {
+            & {
+                color: #ffffff;
+            }
+        }
     }
     &__text-start {
         text-transform: uppercase;
         font-size: 48px;
         font-weight: 600;
         color: #159822;
+        @include bigMobileWidth {
+            & {
+                font-size: 24px;
+            }
+        }
     }
-    &__description {
-        max-width: 850px;
-        @include cenMarg;
-        text-align: center;
-        line-height: 24px;
-    } 
-  }
+}
+
+.black-friday-email {
+    height: 450px;
+    margin-bottom: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    @include main-text;
+    @include mobileWidth {
+        & {
+            height: 692px;
+        }
+    }
+    &__img {
+        height: 450px;
+        position: relative;
+        @include mobileWidth {
+            & {
+                height: 692px;
+            }
+        }
+    }
+    &__img-style {
+        height: 450px;
+        object-fit: cover;
+        @include mobileWidth {
+            & {
+                height: 692px;
+            }
+        }
+    }
+    &__text {
+        max-width: 1400px;
+        position: absolute;
+        display: grid;
+        grid-template-columns: 1fr 1.9fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        align-items: center;
+        @include staticPlockSolor {
+            & {
+                @include padMob;
+            }
+        }
+        @include bigMobileWidth {
+            & {
+                display: flex;
+            } 
+        }
+        @include mobileWidth {
+            & {
+                flex-direction: column;
+            }
+        }
+        
+    }
+    &__text-wrp {
+        text-align: left;
+        @include bigMobileWidth {
+            & {
+                max-width: 700px;
+                width: 100%;
+                text-align: center;
+            } 
+        }
+    }
+    &__form {
+        display: flex;
+        @include bigMobileWidth {
+            & {
+                justify-content: space-around;
+                flex-wrap: wrap;
+            } 
+        }
+    }
+    &__btn {
+        @include btnCardBuy;
+        &::hover {
+
+        }
+
+    }
+    &__email {
+        margin-right: 16px;
+        max-width: 273px;
+        width: 100%;
+        @include btnCardTransparent;
+        background-color: #ffffff;
+        border: 1px solid $colorCard;
+        @include bigMobileWidth {
+            & {
+                margin-right: 0;
+            } 
+        }
+        @include formAdaptiv {
+            & {
+                margin-bottom: 16px;
+            }
+        }
+    }
+    &__text-title {
+        max-width: 826px;
+        margin-bottom: 13px;
+        font-size: 36px;
+        @include smScreenWidth {
+            & {
+                font-size: 24px;
+            }
+        }
+        & {
+            margin-bottom: 24px;
+        }
+    }
+    &__line {
+        max-width: 502px;
+        width: 100%;
+        height: 1px;
+        margin-bottom: 33px;
+        background-color: #C4C4C4;
+        @include bigMobileWidth {
+            & {
+                @include cenMarg;
+            } 
+        }
+        @include mobileWidth {
+            & {
+                margin-bottom: 24px;
+            }
+        }
+    }
+    &__text-main {
+        margin-bottom: 40px;
+        @include smScreenWidth {
+            & {
+                font-size: 16px;
+            }
+        }
+        @include mobileWidth {
+            & {
+                margin-bottom: 24px;
+            }
+        }
+    }
+    &__img-cupone {
+        padding-right: 135px;
+        @include smScreenWidth {
+            & {
+                padding-right: 90px;
+            }
+        }
+        @include bigMobileWidth {
+            & {
+                display: none;
+            } 
+        }
+        @include mobileWidth {
+            & {
+                padding-right: 0;
+                max-width: 331px;
+                display: flex;
+            }
+        }
+    }
+}
+
+.black-freday-wrp-description {
+    max-width: 850px;
+    @include cenMarg;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: $fontRobotoReg;
+    line-height: 24px;
+    @include bigMobileWidth {
+        & {
+            @include padMob;
+        }
+    }
+    @include mobileWidth {
+        & {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+.black-friday-bun-wrp {
+    @include mobileWidth {
+        & {
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+}
+
+.black-friday-email-warning {
+    margin-bottom: 30px;
+    @include main-text;
+}

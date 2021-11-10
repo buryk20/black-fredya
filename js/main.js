@@ -2,22 +2,12 @@ window.onload = function () {
     function getTimeRemaining(endtime) {
         // var start = Date.parse(new Date());
         
-        var a = Date.now(new Date());
-        console.log(a);
-        var start = Date.parse(new Date());
-        console.log(localStorage["currentTime"]);
-            function tickTack () {
-            localStorage["currentTime"] = a;
-            }
-            setInterval(tickTack, 1000);
-            console.log(localStorage["currentTime"]);
-            if(a != new Date()) {
-                var t = Date.parse(endtime) - Date.parse(new Date(a));
-                console.log(t);
-            }
+        
+                var t = Date.parse(endtime) - Date.parse(new Date());
+    
 
         
-        console.log(start);
+        // console.log(start);
         var seconds = Math.floor((t / 1000) % 60);
         var minutes = Math.floor((t / 1000 / 60) % 60);
         var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
@@ -55,7 +45,7 @@ window.onload = function () {
         var timeinterval = setInterval(updateClock, 1000);
       }
       
-      var deadline="January 01 2018 00:00:00 GMT+0300"; //for Ukraine
-      var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000); // for endless timer
+      var deadline="November 22 2021 00:00:00 GMT+0300"; //for Ukraine
+    //   var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000); // for endless timer
       initializeClock('countdown', deadline);
 }
