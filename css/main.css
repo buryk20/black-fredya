@@ -287,6 +287,7 @@ div.banner-info-br-bf {
 .black-freday-wrp__countdown {
   max-width: 708px;
   width: 100%;
+  margin-bottom: 32px;
   margin-left: auto;
   margin-right: auto;
   display: -webkit-box;
@@ -295,6 +296,9 @@ div.banner-info-br-bf {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .black-freday-wrp__text {
@@ -305,6 +309,22 @@ div.banner-info-br-bf {
   font-size: 100px;
   font-weight: 700;
   line-height: 90px;
+  color: #DDDDDD;
+  position: relative;
+}
+
+.black-freday-wrp__countdown-time::before {
+  content: "";
+  position: absolute;
+  top: 57px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #DDDDDD;
+}
+
+.black-freday-wrp__countdown-text {
+  color: #DDDDDD;
 }
 
 .black-freday-wrp__countdown-number {
@@ -320,6 +340,32 @@ div.banner-info-br-bf {
           flex-direction: column;
   background: linear-gradient(162.37deg, #8A8A8A -34.26%, #000000 99.14%);
   border-radius: 8px;
-  border: 1px solid #009B3E;
+  border: 2px solid #009B3E;
+}
+
+.black-freday-wrp__colon {
+  font-size: 70px;
+  color: #159822;
+}
+
+.black-freday-wrp__text-gv {
+  margin-bottom: 24px;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.black-freday-wrp__text-start {
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 600;
+  color: #159822;
+}
+
+.black-freday-wrp__description {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 24px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,6 +1,23 @@
 window.onload = function () {
     function getTimeRemaining(endtime) {
-        var t = Date.parse(endtime) - Date.parse(new Date());
+        // var start = Date.parse(new Date());
+        
+        var a = Date.now(new Date());
+        console.log(a);
+        var start = Date.parse(new Date());
+        console.log(localStorage["currentTime"]);
+            function tickTack () {
+            localStorage["currentTime"] = a;
+            }
+            setInterval(tickTack, 1000);
+            console.log(localStorage["currentTime"]);
+            if(a != new Date()) {
+                var t = Date.parse(endtime) - Date.parse(new Date(a));
+                console.log(t);
+            }
+
+        
+        console.log(start);
         var seconds = Math.floor((t / 1000) % 60);
         var minutes = Math.floor((t / 1000 / 60) % 60);
         var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
@@ -22,13 +39,13 @@ window.onload = function () {
         var secondsSpan = clock.querySelector('.seconds');
       
         function updateClock() {
-          var t = getTimeRemaining(endtime);
-      
+        
+          var t = getTimeRemaining(endtime) 
           daysSpan.innerHTML = t.days;
           hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
           minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
           secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-      
+          console.log(t);
           if (t.total <= 0) {
             clearInterval(timeinterval);
           }
