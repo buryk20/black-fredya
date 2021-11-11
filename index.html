@@ -2,14 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <title>Монтажникам видеонаблюдения</title>
+    <title>Черная пятница с GreenVision – не упустите свой шанс купить систему видеонаблюдения по низкой цене.</title>
     <meta
       name="description"
-      content="Приглашаем к сотрудничеству монтажников и монтажные компании видеонаблюдения, $выгодные цены, ✍обучение, ✆техподдержка"
+      content="Україна В период с 22 по 30 ноября 2021 года каждый покупатель получает скидку 25% на весь ассортимент товаров GreenVision*"
     />
     <meta
       name="keywords"
-      content="видеонаблюдения, сотрудничество, монтажники,"
+      content="черная пятница, черная пятнице, черная пятниц 2021, черная пятница 2020, Черная пятница 2021 Украина, Чорна п'ятниця 2021 "
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -53,35 +53,35 @@
         <article class="black-freday-wrp">
             <div>
                 <div class="black-freday-wrp__text">
-                    <h2 class="black-freday-wrp__text-gv">GreenVision – зеленый свет твоей безопасности!</h2>
-                    <p class="black-freday-wrp__text-start">Стартуем через</p>
+                    <h2 class="black-freday-wrp__text-gv">{{__('black_friday.title')}}</h2>
+                    <p class="black-freday-wrp__text-start">{{__('black_friday.start')}}</p>
                 </div>
                 <div>
                     <div id="countdown" class="black-freday-wrp__countdown">
                         <div class="black-freday-wrp__countdown-number">
                         <span class="days black-freday-wrp__countdown-time"></span>
-                        <span class="black-freday-wrp__countdown-text">Дней</span>
+                        <span class="black-freday-wrp__countdown-text">{{__('black_friday.day')}}</span>
                         </div>
                         <div class="black-freday-wrp__colon">
                             :
                         </div>
                         <div class="black-freday-wrp__countdown-number">
                         <span class="hours black-freday-wrp__countdown-time"></span>
-                        <span class="black-freday-wrp__countdown-text">Часов</span>
+                        <span class="black-freday-wrp__countdown-text">{{__('black_friday.watch')}}</span>
                         </div>
                         <div class="black-freday-wrp__colon">
                             :
                         </div>
                         <div class="black-freday-wrp__countdown-number">
                         <span class="minutes black-freday-wrp__countdown-time"></span>
-                        <span class="black-freday-wrp__countdown-text">Минут</span>
+                        <span class="black-freday-wrp__countdown-text">{{__('black_friday.minutes')}}</span>
                         </div>
                         <div class="black-freday-wrp__colon">
                             :
                         </div>
                         <div class="black-freday-wrp__countdown-number">
                         <span class="seconds black-freday-wrp__countdown-time"></span>
-                        <span class="black-freday-wrp__countdown-text">Секунд</span>
+                        <span class="black-freday-wrp__countdown-text">{{__('black_friday.second')}}</span>
                         </div>  
                     </div>    
                 </div>
@@ -90,8 +90,7 @@
       </div> 
         <article >
             <div class="black-freday-wrp-description">
-                <p>
-                    Черная пятница с GreenVision – не упустите свой шанс купить систему видеонаблюдения по низкой цене. В период с 22 по 30 ноября 2021 года каждый покупатель получает скидку 25% на весь ассортимент товаров GreenVision*
+                <p>{{__('black_friday.blackConditions')}}
                 </p>
             </div>  
         </article>
@@ -103,10 +102,10 @@
             <img class="black-friday-email__img-cupone" src="img/coupon-black-friday.png" alt="Купон">
             <div class="black-friday-email__text-wrp">
                 <h3 class="black-friday-email__text-title">
-                    Любишь быть первым? Воспользуйся специальным предложением! 
+                  {{__('black_friday.first')}}
                 </h3>
                 <div class="black-friday-email__line"></div>
-                <p class="black-friday-email__text-main">Каждый, кто подписан на нашу рассылку получит специальный купон, который даст возможность купить видеонаблюдение GreenVision со скидкой до начала официального старта акции. Купон начинает действовать с 21.11.2021 года. Успей купить самое лучшее раньше других, пока товар есть на складе!
+                <p class="black-friday-email__text-main">{{__('black_friday.coupon')}}
                     </p>
                 <form class="black-friday-email__form" action="https://greenvision.ua/complete-subscribe" method="POST">
                     <input type="hidden" name="_token" value="Mczpd08g8PTQvtECGS4YrsYx9ahlwxWGtFgvP7C1">                <input class="black-friday-email__email" type="email" name="email" id="subscribe" placeholder="E-mail" required>
@@ -116,7 +115,7 @@
         </section>
       </article>
       <div class="black-friday-email-warning">
-        <p>* Акционное предложение не распространяется на продукцию ТМ Ajax и жесткие диски.</p>
+        <p>{{__('black_friday.conditions')}}</p>
     </div>
     </div>
   </body>
